@@ -1,0 +1,293 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+:root{
+    --background:white;
+    --regular-font:black;
+    --card-bg:black;
+    --card-heading:blue;
+    --card-font:white;
+    --button-bg:blue;
+    --button-border:1px solid blue;
+    --button-font-color:blue;
+}
+
+html,body{
+    overflow-x: hidden;
+}
+
+/* navigation styling */
+
+nav{
+    background-color: black;
+    position:sticky;
+    width: 100vw;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid grey;
+
+}
+nav .logo h1{
+    color: white;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 2.5rem;
+}
+
+.links ul{
+    display: flex;
+
+}
+
+.links ul li{
+    padding: 1em;
+}
+
+.links ul li a{
+    color: white;
+    text-transform: capitalize;
+    text-decoration: none;
+    text-decoration:underline ;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 4px;
+    text-decoration-color:blue;
+}
+nav i{
+    color: white;
+}
+
+nav  .menu{
+    display: none;
+}
+
+nav .call-to-action i{
+    font-size: 22px;
+    padding-right: 15px;
+}
+
+/* responsiveness to navigation bar */
+
+@media only screen and (max-width:768px){
+
+    nav .logo h1{
+        font-size: 2rem;
+    }
+}
+
+
+@media only screen and (max-width:468px){
+    nav{
+        padding: 10px;
+    }
+    nav .links{
+        display: none;
+    }
+    nav .menu {
+        display: block;
+    }
+    nav .logo h1{
+        font-size: 1.5rem;
+    }
+    nav .call-to-action i{
+        font: 18px;
+
+    }
+    nav .call-to-action i{
+        display: none;
+    }
+}
+
+
+
+
+/* about me section */
+#about-me-hero{
+    width: 100vw;
+    height: 100vh;
+    
+}
+.about-me{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+}
+.about-me .photo {
+    width: 45%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.about-me .photo img{
+    width: 60vh;
+    height: 60vh;
+    margin: 20px 10px;
+    object-fit: cover;
+    object-position: top 35%;
+    border-radius: 50%;
+    border: 2px solid black;
+}
+.about-me .photo h1{
+ font-size: 25px;
+}
+.about-me .photo button{
+    width: 100px;
+    padding: 10px 10px;
+    margin: 10px 0;
+    border: var(--button-border);
+    color: var(--button-font-color);
+    transition: all .4s ease;
+}
+
+.about-me .photo button:hover{
+    transform: translateY(-10px);
+}
+.about-me .photo #projects{
+    background-color: var(--button-bg);
+    color: var(--card-font);
+}
+.about-me .photo h1 span{
+    color: blue;
+    text-decoration: underline;
+    text-decoration-color:blue;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 3px;
+}
+
+
+#info {
+    width: 100%;
+    margin:0px 30px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+ .call-to-action{
+    display: flex;
+    justify-content: center;
+    
+}
+ #info .info h2{
+    font-size: 20px;
+    color: blue;
+    text-transform: capitalize;
+    padding-bottom: 5px;
+    max-width: 100%;
+
+}
+
+ #info .info p{
+    font-weight: 400;
+    font-size: 16px;
+
+ }
+
+ #more{
+display: grid;
+grid-template-columns: repeat(3,400px);
+place-items: center;
+place-content: center;
+gap: 20px;
+place-self: center;
+ }
+
+#more .education, .vision, .quick-info{
+    background-color: #E0FFFF;
+    padding: 10px 20px;
+    box-shadow: 7px 7px rgba(128, 128, 128, 0.301);
+    border: 1px inset #E0FFFF;
+    border-radius: 10px;
+    transition: all  .4s ease ;
+}
+
+#more .education:hover{
+    transform: translateY(-10px);
+}
+#more .quick-info:hover{
+    transform: translateY(-10px);
+}
+#more .vision:hover{
+    transform: translateY(-10px);
+}
+.quick-info span{
+ display: flex;
+ padding: 10px 0;
+}
+
+.quick-info span h3{
+    font-size: 18px;
+    color: blue;
+}
+#more h3{
+    color: blue;
+    padding:10px 0;
+}
+#more .vision h4{
+   color: black;
+   font-weight: 400;
+}
+#info b{
+    color: blue;
+}
+@media only screen and (max-width:468px){
+    
+    .about-me .photo h1{
+      font-size: 17px;
+      min-width: 90%;
+    }
+     .about-me .photo{
+        width: 90vw;
+     }
+     #info{
+        width: 90vw;
+     }
+     #info .info{
+        width: 100%;
+        margin-bottom: 2em;
+     }
+    #info .info h2{
+        text-align: left;
+        padding: 2px 0;
+        margin: 0;
+        min-width: 100%;
+        margin: 20px 0;
+    }
+    #info .info  p{
+        font-size: 1rem;
+        min-width: 100%;
+        margin: 0;
+        text-align: left;
+    }
+    #info{
+        display: block;
+ 
+    }
+    #more{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+     #more .education h3,h3{
+        padding:10px 0;
+     }
+    #more .education,.quick-info,.vision{
+        margin:1em 0;
+
+    }
+    #more .quick-info {
+        font-size: 1rem;
+        max-width: 90%;
+        margin: auto;
+        text-align: left;
+ 
+    }
+
+}
