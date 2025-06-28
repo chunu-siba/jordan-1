@@ -243,6 +243,10 @@ place-self: center;
       font-size: 17px;
       min-width: 90%;
     }
+     .about-me .photo img{
+        width: 80%;
+        aspect-ratio: 1;
+     }
      .about-me .photo{
         width: 90vw;
      }
