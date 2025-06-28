@@ -244,7 +244,7 @@ place-self: center;
       min-width: 90%;
     }
      .about-me .photo img{
-        width: 80%;
+        width: 7em;
         aspect-ratio: 1;
      }
      .about-me .photo{
